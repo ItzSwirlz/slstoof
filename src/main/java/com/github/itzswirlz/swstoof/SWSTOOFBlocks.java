@@ -2,6 +2,7 @@ package com.github.itzswirlz.swstoof;
 
 import com.github.itzswirlz.swstoof.block.CopperFireBlock;
 import com.github.itzswirlz.swstoof.block.IronFireBlock;
+import com.github.itzswirlz.swstoof.block.RedstoneLanternBlock;
 import com.github.itzswirlz.swstoof.block.RedstoneFireBlock;
 
 import net.minecraft.block.Block;
@@ -101,11 +102,11 @@ public class SWSTOOFBlocks {
      * -----------------
      */
     // TODO: map color
-    // TODO: emit redstone signals for Lantern and Campfire - if we want to
+    // TODO: emit redstone signals for Campfire depending on what is being cooked? Possibly a gamerule?
     public static final RedstoneFireBlock REDSTONE_FIRE = new RedstoneFireBlock(Block.Settings.create().mapColor(MapColor.RED).replaceable().noCollision().breakInstantly().luminance((state) -> {
         return 7;
     }).sounds(BlockSoundGroup.WOOL).pistonBehavior(PistonBehavior.DESTROY).registryKey(REDSTONE_FIRE_KEY));
-    public static final LanternBlock REDSTONE_LANTERN = new LanternBlock(Block.Settings.create().mapColor(MapColor.IRON_GRAY).solid().requiresTool().strength(3.5F).sounds(BlockSoundGroup.LANTERN).luminance((state) -> {
+    public static final LanternBlock REDSTONE_LANTERN = new RedstoneLanternBlock(Block.Settings.create().mapColor(MapColor.IRON_GRAY).solid().requiresTool().strength(3.5F).sounds(BlockSoundGroup.LANTERN).luminance((state) -> {
         return 7;
     }).nonOpaque().pistonBehavior(PistonBehavior.DESTROY).registryKey(REDSTONE_LANTERN_KEY));
     public static final CampfireBlock REDSTONE_CAMPFIRE = new CampfireBlock(false, 1, Block.Settings.create().mapColor(MapColor.SPRUCE_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0F).sounds(BlockSoundGroup.WOOD).luminance(Blocks.createLightLevelFromLitBlockState(10)).nonOpaque().burnable().registryKey(REDSTONE_CAMPFIRE_KEY));
