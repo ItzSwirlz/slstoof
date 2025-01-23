@@ -7,6 +7,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
@@ -39,5 +40,14 @@ public class RedstoneFireBlock extends AbstractFireBlock {
     @Override
     protected boolean isFlammable(BlockState state) {
         return true;
+    }
+
+    protected boolean emitsRedstonePower(BlockState state) {
+        return true;
+    }
+
+    // RedstoneBlock and RedstoneTorchBlock emits 15
+    protected int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
+        return 15;
     }
 }
