@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/template_campfire",
+    "textures": {
+      "fire": "soletssettheoreonfire:block/iron_campfire_fire",
+      "lit_log": "soletssettheoreonfire:block/iron_campfire_log_lit"
+    }
+}
+  

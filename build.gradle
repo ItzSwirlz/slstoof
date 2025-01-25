@@ -20,7 +20,7 @@ repositories {
 
 loom {
 	mods {
-		"sowesettheoreonfire" {
+		"soletssettheoreonfire" {
 			sourceSet sourceSets.main
 		}
 	}

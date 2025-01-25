@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.github.itzswirlz.slstoof.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AbstractFireBlockMixin"
+  ],
+  "client": [
+    "AbstractFireBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

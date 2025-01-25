@@ -1,6 +1,0 @@
-{
-    "parent": "minecraft:block/template_lantern",
-    "textures": {
-      "lantern": "sowesettheoreonfire:block/redstone_lantern"
-    }
-}

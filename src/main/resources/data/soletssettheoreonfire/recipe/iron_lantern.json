@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "soletssettheoreonfire:iron_torch",
+    "X": "minecraft:iron_nugget"
+  },
+  "pattern": [
+    "XXX",
+    "X#X",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "soletssettheoreonfire:iron_lantern"
+  }
+}

@@ -1,6 +1,0 @@
-{
-    "parent": "minecraft:block/template_fire_side",
-    "textures": {
-      "fire": "sowesettheoreonfire:block/iron_fire_0"
-    }
-}

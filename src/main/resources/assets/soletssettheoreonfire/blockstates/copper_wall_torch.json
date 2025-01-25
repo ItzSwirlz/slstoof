@@ -1,0 +1,20 @@
+{
+    "variants": {
+      "facing=east": {
+        "model": "soletssettheoreonfire:block/copper_wall_torch"
+      },
+      "facing=north": {
+        "model": "soletssettheoreonfire:block/copper_wall_torch",
+        "y": 270
+      },
+      "facing=south": {
+        "model": "soletssettheoreonfire:block/copper_wall_torch",
+        "y": 90
+      },
+      "facing=west": {
+        "model": "soletssettheoreonfire:block/copper_wall_torch",
+        "y": 180
+      }
+    }
+}
+  
