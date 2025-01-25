@@ -8,12 +8,12 @@ import net.minecraft.world.BlockView;
 
 // Sole purpose of this class is to give the redstone lantern block the redstone emitting capabilities
 public class RedstoneLanternBlock extends LanternBlock {
-    public RedstoneLanternBlock(Settings settings) {
-        super(settings);
-    }
+   public RedstoneLanternBlock(Settings settings) {
+      super(settings);
+   }
 
-    // LanternBlock extends Block which contain the redstone methods
-    protected boolean emitsRedstonePower(BlockState state) {
+   // LanternBlock extends Block which contain the redstone methods
+   protected boolean emitsRedstonePower(BlockState state) {
       return true;
    }
 

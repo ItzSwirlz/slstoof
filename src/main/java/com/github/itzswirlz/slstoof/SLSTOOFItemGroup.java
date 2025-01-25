@@ -11,22 +11,23 @@ import net.minecraft.util.Identifier;
 
 public class SLSTOOFItemGroup {
     public static final ItemGroup slstoof_ITEM_GROUP = FabricItemGroup.builder()
-        .displayName(Text.literal("So Let's Set The Ore On Fire"))
-        .icon(() -> new ItemStack(Items.FLINT_AND_STEEL))
-        .entries((context, entries) -> {
-            entries.add(SLSTOOFItems.COPPER_TORCH);
-            entries.add(SLSTOOFBlocks.COPPER_LANTERN);
-            entries.add(SLSTOOFItems.COPPER_CAMPFIRE);
+            .displayName(Text.literal("So Let's Set The Ore On Fire"))
+            .icon(() -> new ItemStack(Items.FLINT_AND_STEEL))
+            .entries((context, entries) -> {
+                entries.add(SLSTOOFItems.COPPER_TORCH);
+                entries.add(SLSTOOFBlocks.COPPER_LANTERN);
+                entries.add(SLSTOOFItems.COPPER_CAMPFIRE);
 
-            entries.add(SLSTOOFItems.IRON_TORCH);
-            entries.add(SLSTOOFItems.IRON_LANTERN);
-            entries.add(SLSTOOFItems.IRON_CAMPFIRE);
+                entries.add(SLSTOOFItems.IRON_TORCH);
+                entries.add(SLSTOOFItems.IRON_LANTERN);
+                entries.add(SLSTOOFItems.IRON_CAMPFIRE);
 
-            entries.add(SLSTOOFItems.REDSTONE_LANTERN);
-            entries.add(SLSTOOFItems.REDSTONE_CAMPFIRE);
-        }).build();
+                entries.add(SLSTOOFItems.REDSTONE_LANTERN);
+                entries.add(SLSTOOFItems.REDSTONE_CAMPFIRE);
+            }).build();
 
     public static void registerslstoofItemGroup() {
-        Registry.register(Registries.ITEM_GROUP, Identifier.of(SLSTOOFMod.MOD_ID, "soletssettheoreonfire"), slstoof_ITEM_GROUP);
+        Registry.register(Registries.ITEM_GROUP, Identifier.of(SLSTOOFMod.MOD_ID, "soletssettheoreonfire"),
+                slstoof_ITEM_GROUP);
     }
 }

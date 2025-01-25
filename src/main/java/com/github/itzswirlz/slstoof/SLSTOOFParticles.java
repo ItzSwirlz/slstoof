@@ -11,7 +11,9 @@ public class SLSTOOFParticles {
     public static final SimpleParticleType IRON_FIRE_FLAME = FabricParticleTypes.simple();
 
     public static void registerFireParticles() {
-        Registry.register(Registries.PARTICLE_TYPE, Identifier.of(SLSTOOFMod.MOD_ID, "copper_fire_flame"), COPPER_FIRE_FLAME);
-        Registry.register(Registries.PARTICLE_TYPE, Identifier.of(SLSTOOFMod.MOD_ID, "iron_fire_flame"), IRON_FIRE_FLAME);
+        Registry.register(Registries.PARTICLE_TYPE, Identifier.of(SLSTOOFMod.MOD_ID, "copper_fire_flame"),
+                COPPER_FIRE_FLAME);
+        Registry.register(Registries.PARTICLE_TYPE, Identifier.of(SLSTOOFMod.MOD_ID, "iron_fire_flame"),
+                IRON_FIRE_FLAME);
     }
 }

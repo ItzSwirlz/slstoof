@@ -14,11 +14,12 @@ public class RedstoneCampfireBlock extends CampfireBlock {
 
     // CampfireBlock extends Block which contain the redstone methods
     protected boolean emitsRedstonePower(BlockState state) {
-      return true;
+        return true;
     }
 
     // For now, set to 15
-    // TODO: Have a configuration (gamerule?) such that since up to four items can be on a campfire. The more items, the more power
+    // TODO: Have a configuration (gamerule?) such that since up to four items can
+    // be on a campfire. The more items, the more power
     protected int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
         return 15;
     }

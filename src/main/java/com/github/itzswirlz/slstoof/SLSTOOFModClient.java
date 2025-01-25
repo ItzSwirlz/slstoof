@@ -14,23 +14,23 @@ public class SLSTOOFModClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(SLSTOOFParticles.COPPER_FIRE_FLAME, FlameParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SLSTOOFParticles.IRON_FIRE_FLAME, FlameParticle.Factory::new);
 
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), new Block[]{
-            SLSTOOFBlocks.COPPER_CAMPFIRE,
-            SLSTOOFBlocks.COPPER_FIRE,
-            SLSTOOFBlocks.COPPER_LANTERN,
-            SLSTOOFBlocks.COPPER_TORCH,
-            SLSTOOFBlocks.COPPER_WALL_TORCH,
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), new Block[] {
+                SLSTOOFBlocks.COPPER_CAMPFIRE,
+                SLSTOOFBlocks.COPPER_FIRE,
+                SLSTOOFBlocks.COPPER_LANTERN,
+                SLSTOOFBlocks.COPPER_TORCH,
+                SLSTOOFBlocks.COPPER_WALL_TORCH,
 
-            SLSTOOFBlocks.IRON_CAMPFIRE,
-            SLSTOOFBlocks.IRON_FIRE,
-            SLSTOOFBlocks.IRON_LANTERN,
-            SLSTOOFBlocks.IRON_TORCH,
-            SLSTOOFBlocks.IRON_WALL_TORCH,
+                SLSTOOFBlocks.IRON_CAMPFIRE,
+                SLSTOOFBlocks.IRON_FIRE,
+                SLSTOOFBlocks.IRON_LANTERN,
+                SLSTOOFBlocks.IRON_TORCH,
+                SLSTOOFBlocks.IRON_WALL_TORCH,
 
-            SLSTOOFBlocks.REDSTONE_FIRE,
-            SLSTOOFBlocks.REDSTONE_LANTERN,
-            SLSTOOFBlocks.REDSTONE_CAMPFIRE
+                SLSTOOFBlocks.REDSTONE_FIRE,
+                SLSTOOFBlocks.REDSTONE_LANTERN,
+                SLSTOOFBlocks.REDSTONE_CAMPFIRE
         });
     }
-    
+
 }

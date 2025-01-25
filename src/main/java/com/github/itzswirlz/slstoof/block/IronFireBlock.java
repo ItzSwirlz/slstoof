@@ -21,9 +21,11 @@ public class IronFireBlock extends AbstractFireBlock {
         return CODEC;
     }
 
-    // This is deprecated (in AbstractBlock) but its needed to ensure if the block below the fire breaks, we remove it.
+    // This is deprecated (in AbstractBlock) but its needed to ensure if the block
+    // below the fire breaks, we remove it.
     // SoulFireBlock uses it though?
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
+            WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         return this.canPlaceAt(state, world, pos) ? this.getDefaultState() : Blocks.AIR.getDefaultState();
     }
 

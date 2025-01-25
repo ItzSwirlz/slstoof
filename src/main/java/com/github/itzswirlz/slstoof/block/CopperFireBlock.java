@@ -22,9 +22,11 @@ public class CopperFireBlock extends AbstractFireBlock {
         return CODEC;
     }
 
-    // This is deprecated (in AbstractBlock) but its needed to ensure if the block below the fire breaks, we remove it.
+    // This is deprecated (in AbstractBlock) but its needed to ensure if the block
+    // below the fire breaks, we remove it.
     // SoulFireBlock uses it though?
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
+            WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         return this.canPlaceAt(state, world, pos) ? this.getDefaultState() : Blocks.AIR.getDefaultState();
     }
 
@@ -36,36 +38,36 @@ public class CopperFireBlock extends AbstractFireBlock {
     // TODO: check we got every block
     public static boolean isCopperBase(BlockState state) {
         return state.getBlock().equals(Blocks.COPPER_BLOCK) ||
-        state.getBlock().equals(Blocks.CUT_COPPER) ||
-        state.getBlock().equals(Blocks.CUT_COPPER_SLAB) ||
-        state.getBlock().equals(Blocks.CUT_COPPER_STAIRS) ||
-        state.getBlock().equals(Blocks.DEEPSLATE_COPPER_ORE) ||
-        state.getBlock().equals(Blocks.RAW_COPPER_BLOCK) ||
-        state.getBlock().equals(Blocks.WAXED_COPPER_BLOCK) ||
-        state.getBlock().equals(Blocks.EXPOSED_COPPER) ||
-        state.getBlock().equals(Blocks.EXPOSED_CUT_COPPER) ||
-        state.getBlock().equals(Blocks.EXPOSED_CUT_COPPER_SLAB) ||
-        state.getBlock().equals(Blocks.EXPOSED_CUT_COPPER_STAIRS) ||
-        state.getBlock().equals(Blocks.WAXED_EXPOSED_COPPER) ||
-        state.getBlock().equals(Blocks.WAXED_EXPOSED_CUT_COPPER) ||
-        state.getBlock().equals(Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB) ||
-        state.getBlock().equals(Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS) ||
-        state.getBlock().equals(Blocks.WEATHERED_COPPER) ||
-        state.getBlock().equals(Blocks.WEATHERED_CUT_COPPER) ||
-        state.getBlock().equals(Blocks.WEATHERED_CUT_COPPER_SLAB) ||
-        state.getBlock().equals(Blocks.WEATHERED_CUT_COPPER_STAIRS) ||
-        state.getBlock().equals(Blocks.WAXED_WEATHERED_COPPER) ||
-        state.getBlock().equals(Blocks.WAXED_WEATHERED_CUT_COPPER) ||
-        state.getBlock().equals(Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB) ||
-        state.getBlock().equals(Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS) ||
-        state.getBlock().equals(Blocks.OXIDIZED_COPPER) ||
-        state.getBlock().equals(Blocks.OXIDIZED_CUT_COPPER) ||
-        state.getBlock().equals(Blocks.OXIDIZED_CUT_COPPER_SLAB) ||
-        state.getBlock().equals(Blocks.OXIDIZED_CUT_COPPER_STAIRS) ||
-        state.getBlock().equals(Blocks.WAXED_OXIDIZED_COPPER) ||
-        state.getBlock().equals(Blocks.WAXED_OXIDIZED_CUT_COPPER) ||
-        state.getBlock().equals(Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB) ||
-        state.getBlock().equals(Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS);
+                state.getBlock().equals(Blocks.CUT_COPPER) ||
+                state.getBlock().equals(Blocks.CUT_COPPER_SLAB) ||
+                state.getBlock().equals(Blocks.CUT_COPPER_STAIRS) ||
+                state.getBlock().equals(Blocks.DEEPSLATE_COPPER_ORE) ||
+                state.getBlock().equals(Blocks.RAW_COPPER_BLOCK) ||
+                state.getBlock().equals(Blocks.WAXED_COPPER_BLOCK) ||
+                state.getBlock().equals(Blocks.EXPOSED_COPPER) ||
+                state.getBlock().equals(Blocks.EXPOSED_CUT_COPPER) ||
+                state.getBlock().equals(Blocks.EXPOSED_CUT_COPPER_SLAB) ||
+                state.getBlock().equals(Blocks.EXPOSED_CUT_COPPER_STAIRS) ||
+                state.getBlock().equals(Blocks.WAXED_EXPOSED_COPPER) ||
+                state.getBlock().equals(Blocks.WAXED_EXPOSED_CUT_COPPER) ||
+                state.getBlock().equals(Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB) ||
+                state.getBlock().equals(Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS) ||
+                state.getBlock().equals(Blocks.WEATHERED_COPPER) ||
+                state.getBlock().equals(Blocks.WEATHERED_CUT_COPPER) ||
+                state.getBlock().equals(Blocks.WEATHERED_CUT_COPPER_SLAB) ||
+                state.getBlock().equals(Blocks.WEATHERED_CUT_COPPER_STAIRS) ||
+                state.getBlock().equals(Blocks.WAXED_WEATHERED_COPPER) ||
+                state.getBlock().equals(Blocks.WAXED_WEATHERED_CUT_COPPER) ||
+                state.getBlock().equals(Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB) ||
+                state.getBlock().equals(Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS) ||
+                state.getBlock().equals(Blocks.OXIDIZED_COPPER) ||
+                state.getBlock().equals(Blocks.OXIDIZED_CUT_COPPER) ||
+                state.getBlock().equals(Blocks.OXIDIZED_CUT_COPPER_SLAB) ||
+                state.getBlock().equals(Blocks.OXIDIZED_CUT_COPPER_STAIRS) ||
+                state.getBlock().equals(Blocks.WAXED_OXIDIZED_COPPER) ||
+                state.getBlock().equals(Blocks.WAXED_OXIDIZED_CUT_COPPER) ||
+                state.getBlock().equals(Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB) ||
+                state.getBlock().equals(Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS);
     }
 
     @Override
