@@ -15,7 +15,7 @@ public class SLSTOOFItemGroup {
             .icon(() -> new ItemStack(Items.FLINT_AND_STEEL))
             .entries((context, entries) -> {
                 entries.add(SLSTOOFItems.COPPER_TORCH);
-                entries.add(SLSTOOFBlocks.COPPER_LANTERN);
+                entries.add(SLSTOOFItems.COPPER_LANTERN);
                 entries.add(SLSTOOFItems.COPPER_CAMPFIRE);
 
                 entries.add(SLSTOOFItems.IRON_TORCH);
