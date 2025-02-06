@@ -3,9 +3,10 @@ package com.github.itzswirlz.slstoof;
 import com.github.itzswirlz.slstoof.block.CopperFireBlock;
 import com.github.itzswirlz.slstoof.block.IronFireBlock;
 import com.github.itzswirlz.slstoof.block.RedstoneCampfireBlock;
-import com.github.itzswirlz.slstoof.block.RedstoneLanternBlock;
 import com.github.itzswirlz.slstoof.block.RedstoneFireBlock;
+import com.github.itzswirlz.slstoof.block.RedstoneLanternBlock;
 
+import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CampfireBlock;
@@ -13,7 +14,6 @@ import net.minecraft.block.LanternBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.TorchBlock;
 import net.minecraft.block.WallTorchBlock;
-import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -56,7 +56,6 @@ public class SLSTOOFBlocks {
      * General TODOs:
      * - Fix loot tables (torches/wall torches but also double check lanterns and
      * campfires)
-     * - Correct MapColors
      */
 
     public static final CopperFireBlock COPPER_FIRE = new CopperFireBlock(Settings.copy(Blocks.FIRE)
