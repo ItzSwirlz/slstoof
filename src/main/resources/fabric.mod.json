@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "soletssettheoreonfire",
 	"version": "${version}",
-	"name": "So Let's Set the Ore on Fire",
+	"name": "So Let's Set The Ore On Fire",
 	"description": "Adds correct ore-specific fire colors and respective blocks, so they can burn brighter than the sun.",
 	"authors": [
 	  "ItzSwirlz"
