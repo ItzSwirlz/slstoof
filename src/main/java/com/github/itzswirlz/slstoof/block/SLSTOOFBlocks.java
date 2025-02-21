@@ -1,7 +1,8 @@
 package com.github.itzswirlz.slstoof.block;
 
 import com.github.itzswirlz.slstoof.SLSTOOFMod;
-import com.github.itzswirlz.slstoof.SLSTOOFParticles;
+import com.github.itzswirlz.slstoof.particle.SLSTOOFParticles;
+
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;

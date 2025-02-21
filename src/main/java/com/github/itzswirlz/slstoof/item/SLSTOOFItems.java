@@ -1,5 +1,6 @@
-package com.github.itzswirlz.slstoof;
+package com.github.itzswirlz.slstoof.item;
 
+import com.github.itzswirlz.slstoof.SLSTOOFMod;
 import com.github.itzswirlz.slstoof.block.SLSTOOFBlocks;
 
 import net.minecraft.item.BlockItem;

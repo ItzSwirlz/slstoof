@@ -1,6 +1,7 @@
 package com.github.itzswirlz.slstoof;
 
 import com.github.itzswirlz.slstoof.block.SLSTOOFBlocks;
+import com.github.itzswirlz.slstoof.particle.SLSTOOFParticles;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;

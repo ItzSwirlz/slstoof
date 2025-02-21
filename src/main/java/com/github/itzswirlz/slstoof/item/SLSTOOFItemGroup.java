@@ -1,4 +1,6 @@
-package com.github.itzswirlz.slstoof;
+package com.github.itzswirlz.slstoof.item;
+
+import com.github.itzswirlz.slstoof.SLSTOOFMod;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
