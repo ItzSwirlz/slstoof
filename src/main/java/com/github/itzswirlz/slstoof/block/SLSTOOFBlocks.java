@@ -1,11 +1,7 @@
-package com.github.itzswirlz.slstoof;
+package com.github.itzswirlz.slstoof.block;
 
-import com.github.itzswirlz.slstoof.block.CopperFireBlock;
-import com.github.itzswirlz.slstoof.block.IronFireBlock;
-import com.github.itzswirlz.slstoof.block.RedstoneCampfireBlock;
-import com.github.itzswirlz.slstoof.block.RedstoneFireBlock;
-import com.github.itzswirlz.slstoof.block.RedstoneLanternBlock;
-
+import com.github.itzswirlz.slstoof.SLSTOOFMod;
+import com.github.itzswirlz.slstoof.SLSTOOFParticles;
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -71,10 +67,11 @@ public class SLSTOOFBlocks {
     public static final CampfireBlock COPPER_CAMPFIRE = new CampfireBlock(false, 1,
             Settings.copy(Blocks.SOUL_CAMPFIRE).registryKey(COPPER_CAMPFIRE_KEY));
 
-    public static final IronFireBlock IRON_FIRE = new IronFireBlock(Settings.copy(Blocks.FIRE).mapColor(MapColor.GOLD)
-            .luminance((state) -> {
-                return 10;
-            }).registryKey(IRON_FIRE_KEY));
+    public static final IronFireBlock IRON_FIRE = new IronFireBlock(
+            Settings.copy(Blocks.FIRE).mapColor(MapColor.GOLD)
+                    .luminance((state) -> {
+                        return 10;
+                    }).registryKey(IRON_FIRE_KEY));
     public static final TorchBlock IRON_TORCH = new TorchBlock(SLSTOOFParticles.IRON_FIRE_FLAME,
             Settings.copy(Blocks.SOUL_TORCH).registryKey(IRON_TORCH_KEY));
     public static final TorchBlock IRON_WALL_TORCH = new WallTorchBlock(SLSTOOFParticles.IRON_FIRE_FLAME,
@@ -109,23 +106,28 @@ public class SLSTOOFBlocks {
     public static void registerCopperFireBlocks() {
         Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "copper_fire"), COPPER_FIRE);
         Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "copper_torch"), COPPER_TORCH);
-        Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "copper_wall_torch"), COPPER_WALL_TORCH);
+        Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "copper_wall_torch"),
+                COPPER_WALL_TORCH);
         Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "copper_lantern"), COPPER_LANTERN);
-        Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "copper_campfire"), COPPER_CAMPFIRE);
+        Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "copper_campfire"),
+                COPPER_CAMPFIRE);
     }
 
     public static void registerIronFireBlocks() {
         Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "iron_campfire"), IRON_CAMPFIRE);
         Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "iron_fire"), IRON_FIRE);
         Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "iron_torch"), IRON_TORCH);
-        Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "iron_wall_torch"), IRON_WALL_TORCH);
+        Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "iron_wall_torch"),
+                IRON_WALL_TORCH);
         Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "iron_lantern"), IRON_LANTERN);
     }
 
     public static void registerRedstoneFireBlocks() {
         Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "redstone_fire"), REDSTONE_FIRE);
-        Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "redstone_lantern"), REDSTONE_LANTERN);
-        Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "redstone_campfire"), REDSTONE_CAMPFIRE);
+        Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "redstone_lantern"),
+                REDSTONE_LANTERN);
+        Registry.register(Registries.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, "redstone_campfire"),
+                REDSTONE_CAMPFIRE);
     }
 
     // Without this, traits like the smoke particles and being able to cook won't

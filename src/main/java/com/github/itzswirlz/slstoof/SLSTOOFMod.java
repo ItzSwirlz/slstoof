@@ -1,5 +1,7 @@
 package com.github.itzswirlz.slstoof;
 
+import com.github.itzswirlz.slstoof.block.SLSTOOFBlocks;
+
 import net.fabricmc.api.ModInitializer;
 
 public class SLSTOOFMod implements ModInitializer {
@@ -18,7 +20,7 @@ public class SLSTOOFMod implements ModInitializer {
 		SLSTOOFBlocks.registerRedstoneFireBlocks();
 		SLSTOOFItems.registerRedstoneBlockItems();
 
-		SLSTOOFItemGroup.registerslstoofItemGroup();
+		SLSTOOFItemGroup.registerItemGroup();
 
 		SLSTOOFBlocks.updateCampfireBlockEntityType();
 	}

@@ -1,6 +1,6 @@
 package com.github.itzswirlz.slstoof.mixin;
 
-import com.github.itzswirlz.slstoof.SLSTOOFBlocks;
+import com.github.itzswirlz.slstoof.block.SLSTOOFBlocks;
 import com.github.itzswirlz.slstoof.block.CopperFireBlock;
 import com.github.itzswirlz.slstoof.block.IronFireBlock;
 import com.github.itzswirlz.slstoof.block.RedstoneFireBlock;
