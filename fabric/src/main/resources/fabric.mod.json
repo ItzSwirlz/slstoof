@@ -17,16 +17,17 @@
 	"environment": "*",
 	"entrypoints": {
 	  "main": [
-		"com.github.itzswirlz.slstoof.SLSTOOFMod"
+		"com.github.itzswirlz.slstoof.SLSTOOFModFabric"
 	  ],
 	  "client": [
-		"com.github.itzswirlz.slstoof.SLSTOOFModClient"
+		"com.github.itzswirlz.slstoof.client.SLSTOOFModFabricClient"
 	  ]
 	},
 	"mixins": [
 		"soletssettheoreonfire.mixins.json"
 	],
-	"depends": {
+  "accessWidener" : "soletssettheoreonfire.accesswidener",
+  "depends": {
 	  "fabricloader": ">=0.16.9",
 	  "minecraft": "~1.21.4",
 	  "java": ">=21",

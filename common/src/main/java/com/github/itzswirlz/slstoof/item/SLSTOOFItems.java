@@ -38,17 +38,17 @@ public class SLSTOOFItems {
             new Item.Settings().registryKey(COPPER_CAMPFIRE_KEY));
     public static final BlockItem COPPER_LANTERN = new BlockItem(SLSTOOFBlocks.COPPER_LANTERN,
             new Item.Settings().registryKey(COPPER_LANTERN_KEY));
-    public static final VerticallyAttachableBlockItem COPPER_TORCH = new VerticallyAttachableBlockItem(
-            SLSTOOFBlocks.COPPER_TORCH, SLSTOOFBlocks.COPPER_WALL_TORCH, Direction.DOWN,
-            new Item.Settings().registryKey(COPPER_TORCH_KEY));
+     public static final VerticallyAttachableBlockItem COPPER_TORCH = new VerticallyAttachableBlockItem(
+             SLSTOOFBlocks.COPPER_TORCH, SLSTOOFBlocks.COPPER_WALL_TORCH, Direction.DOWN,
+             new Item.Settings().registryKey(COPPER_TORCH_KEY));
 
     public static final BlockItem IRON_CAMPFIRE = new BlockItem(SLSTOOFBlocks.IRON_CAMPFIRE,
             new Item.Settings().registryKey(IRON_CAMPFIRE_KEY));
     public static final BlockItem IRON_LANTERN = new BlockItem(SLSTOOFBlocks.IRON_LANTERN,
             new Item.Settings().registryKey(IRON_LANTERN_KEY));
-    public static final VerticallyAttachableBlockItem IRON_TORCH = new VerticallyAttachableBlockItem(
-            SLSTOOFBlocks.IRON_TORCH, SLSTOOFBlocks.IRON_WALL_TORCH, Direction.DOWN,
-            new Item.Settings().registryKey(IRON_TORCH_KEY));
+     public static final VerticallyAttachableBlockItem IRON_TORCH = new VerticallyAttachableBlockItem(
+             SLSTOOFBlocks.IRON_TORCH, SLSTOOFBlocks.IRON_WALL_TORCH, Direction.DOWN,
+             new Item.Settings().registryKey(IRON_TORCH_KEY));
 
     public static final BlockItem REDSTONE_CAMPFIRE = new BlockItem(SLSTOOFBlocks.REDSTONE_CAMPFIRE,
             new Item.Settings().registryKey(REDSTONE_CAMPFIRE_KEY));
@@ -58,13 +58,13 @@ public class SLSTOOFItems {
     public static void registerCopperBlockItems() {
         Registry.register(Registries.ITEM, Identifier.of(SLSTOOFMod.MOD_ID, "copper_campfire"), COPPER_CAMPFIRE);
         Registry.register(Registries.ITEM, Identifier.of(SLSTOOFMod.MOD_ID, "copper_lantern"), COPPER_LANTERN);
-        Registry.register(Registries.ITEM, Identifier.of(SLSTOOFMod.MOD_ID, "copper_torch"), COPPER_TORCH);
+         Registry.register(Registries.ITEM, Identifier.of(SLSTOOFMod.MOD_ID, "copper_torch"), COPPER_TORCH);
     }
 
     public static void registerIronBlockItems() {
         Registry.register(Registries.ITEM, Identifier.of(SLSTOOFMod.MOD_ID, "iron_campfire"), IRON_CAMPFIRE);
         Registry.register(Registries.ITEM, Identifier.of(SLSTOOFMod.MOD_ID, "iron_lantern"), IRON_LANTERN);
-        Registry.register(Registries.ITEM, Identifier.of(SLSTOOFMod.MOD_ID, "iron_torch"), IRON_TORCH);
+         Registry.register(Registries.ITEM, Identifier.of(SLSTOOFMod.MOD_ID, "iron_torch"), IRON_TORCH);
     }
 
     public static void registerRedstoneBlockItems() {

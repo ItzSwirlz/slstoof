@@ -1,0 +1,3 @@
+accessWidener   v2  named
+accessible  method   net/minecraft/block/TorchBlock   <init>  (Lnet/minecraft/particle/SimpleParticleType;Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible  method   net/minecraft/block/WallTorchBlock   <init>  (Lnet/minecraft/particle/SimpleParticleType;Lnet/minecraft/block/AbstractBlock$Settings;)V

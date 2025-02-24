@@ -26,11 +26,11 @@ public class SLSTOOFItemGroup {
                 ItemGroup.create(null, -1).displayName(Text.literal("So Let's Set The Ore On Fire"))
                         .icon(() -> new ItemStack(Items.FLINT_AND_STEEL))
                         .entries((context, entries) -> {
-                            entries.add(SLSTOOFItems.COPPER_TORCH);
+                             entries.add(SLSTOOFItems.COPPER_TORCH);
                             entries.add(SLSTOOFItems.COPPER_LANTERN);
                             entries.add(SLSTOOFItems.COPPER_CAMPFIRE);
 
-                            entries.add(SLSTOOFItems.IRON_TORCH);
+                             entries.add(SLSTOOFItems.IRON_TORCH);
                             entries.add(SLSTOOFItems.IRON_LANTERN);
                             entries.add(SLSTOOFItems.IRON_CAMPFIRE);
 
