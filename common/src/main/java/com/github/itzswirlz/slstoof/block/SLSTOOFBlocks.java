@@ -3,7 +3,9 @@ package com.github.itzswirlz.slstoof.block;
 import java.util.function.ToIntFunction;
 
 import com.github.itzswirlz.slstoof.SLSTOOFMod;
-// import com.github.itzswirlz.slstoof.particle.SLSTOOFParticles;
+import com.google.common.base.Supplier;
+
+import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -11,133 +13,45 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.CampfireBlock;
 import net.minecraft.block.LanternBlock;
 import net.minecraft.block.MapColor;
-import net.minecraft.block.TorchBlock;
-import net.minecraft.block.WallTorchBlock;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.particle.ParticleTypes;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
 public class SLSTOOFBlocks {
+	public static final RegistryKey<Block> COPPER_FIRE_KEY = registerKey("copper_fire");
+	public static final RegistryKey<Block> COPPER_TORCH_KEY = registerKey("copper_torch");
+	public static final RegistryKey<Block> COPPER_WALL_TORCH_KEY = registerKey("copper_wall_torch");
+	public static final RegistryKey<Block> COPPER_LANTERN_KEY = registerKey("copper_lantern");
+	public static final RegistryKey<Block> COPPER_CAMPFIRE_KEY = registerKey("copper_campfire");
 
-	// TODO: is there a clean alternative, like a facotry or something?
-	public static final RegistryKey<Block> COPPER_FIRE_KEY = RegistryKey.of(
-		RegistryKeys.BLOCK,
-		Identifier.of(SLSTOOFMod.MOD_ID, "copper_fire")
-	);
-	public static final RegistryKey<Block> COPPER_TORCH_KEY = RegistryKey.of(
-		RegistryKeys.BLOCK,
-		Identifier.of(SLSTOOFMod.MOD_ID, "copper_torch")
-	);
-	public static final RegistryKey<Block> COPPER_WALL_TORCH_KEY =
-		RegistryKey.of(
-			RegistryKeys.BLOCK,
-			Identifier.of(SLSTOOFMod.MOD_ID, "copper_wall_torch")
-		);
-	public static final RegistryKey<Block> COPPER_LANTERN_KEY = RegistryKey.of(
-		RegistryKeys.BLOCK,
-		Identifier.of(SLSTOOFMod.MOD_ID, "copper_lantern")
-	);
-	public static final RegistryKey<Block> COPPER_CAMPFIRE_KEY = RegistryKey.of(
-		RegistryKeys.BLOCK,
-		Identifier.of(SLSTOOFMod.MOD_ID, "copper_campfire")
-	);
+	public static final RegistryKey<Block> IRON_FIRE_KEY = registerKey("iron_fire");
+	public static final RegistryKey<Block> IRON_TORCH_KEY = registerKey("iron_torch");
+	public static final RegistryKey<Block> IRON_WALL_TORCH_KEY = registerKey("iron_wall_torch");
+	public static final RegistryKey<Block> IRON_LANTERN_KEY = registerKey("iron_lantern");
+	public static final RegistryKey<Block> IRON_CAMPFIRE_KEY = registerKey("iron_campfire");
 
-	public static final RegistryKey<Block> IRON_FIRE_KEY = RegistryKey.of(
-		RegistryKeys.BLOCK,
-		Identifier.of(SLSTOOFMod.MOD_ID, "iron_fire")
-	);
-	public static final RegistryKey<Block> IRON_TORCH_KEY = RegistryKey.of(
-		RegistryKeys.BLOCK,
-		Identifier.of(SLSTOOFMod.MOD_ID, "iron_torch")
-	);
-	public static final RegistryKey<Block> IRON_WALL_TORCH_KEY = RegistryKey.of(
-		RegistryKeys.BLOCK,
-		Identifier.of(SLSTOOFMod.MOD_ID, "iron_wall_torch")
-	);
-	public static final RegistryKey<Block> IRON_LANTERN_KEY = RegistryKey.of(
-		RegistryKeys.BLOCK,
-		Identifier.of(SLSTOOFMod.MOD_ID, "iron_lantern")
-	);
-	public static final RegistryKey<Block> IRON_CAMPFIRE_KEY = RegistryKey.of(
-		RegistryKeys.BLOCK,
-		Identifier.of(SLSTOOFMod.MOD_ID, "iron_campfire")
-	);
+	public static final RegistryKey<Block> REDSTONE_FIRE_KEY = registerKey("redstone_fire");
+	public static final RegistryKey<Block> REDSTONE_LANTERN_KEY = registerKey("redstone_lantern");
+	public static final RegistryKey<Block> REDSTONE_CAMPFIRE_KEY = registerKey("redstone_campfire");
 
-	public static final RegistryKey<Block> REDSTONE_FIRE_KEY = RegistryKey.of(
-		RegistryKeys.BLOCK,
-		Identifier.of(SLSTOOFMod.MOD_ID, "redstone_fire")
-	);
-	public static final RegistryKey<Block> REDSTONE_LANTERN_KEY =
-		RegistryKey.of(
-			RegistryKeys.BLOCK,
-			Identifier.of(SLSTOOFMod.MOD_ID, "redstone_lantern")
-		);
-	public static final RegistryKey<Block> REDSTONE_CAMPFIRE_KEY =
-		RegistryKey.of(
-			RegistryKeys.BLOCK,
-			Identifier.of(SLSTOOFMod.MOD_ID, "redstone_campfire")
-		);
+	
+	public static RegistrySupplier<CopperFireBlock> COPPER_FIRE;
+	public static RegistrySupplier<IronFireBlock> IRON_FIRE;
+	public static RegistrySupplier<RedstoneFireBlock> REDSTONE_FIRE;
 
-	/*
-	 * General TODOs:
-	 * - Fix loot tables (torches/wall torches but also double check lanterns and
-	 * campfires)
-	 */
+	public static RegistrySupplier<SLSTOOFTorchBlock> COPPER_TORCH;
+	public static RegistrySupplier<SLSTOOFWallTorchBlock> COPPER_WALL_TORCH;
+	public static RegistrySupplier<SLSTOOFTorchBlock> IRON_TORCH;
+	public static RegistrySupplier<SLSTOOFWallTorchBlock> IRON_WALL_TORCH;
 
-	public static final CopperFireBlock COPPER_FIRE = new CopperFireBlock(
-		Settings.copy(Blocks.FIRE)
-			.mapColor(MapColor.TEAL)
-			.luminance(state -> {
-				return 10;
-			})
-			.registryKey(COPPER_FIRE_KEY)
-	);
-	 public static final TorchBlock COPPER_TORCH = new TorchBlock(
-		 ParticleTypes.FLAME,
-	 	Settings.copy(Blocks.SOUL_TORCH).registryKey(COPPER_TORCH_KEY)
-	 );
-	 public static final TorchBlock COPPER_WALL_TORCH = new WallTorchBlock(
-		 ParticleTypes.FLAME,
-	 	Settings.copy(Blocks.SOUL_WALL_TORCH).registryKey(COPPER_WALL_TORCH_KEY)
-	 );
-	public static final LanternBlock COPPER_LANTERN = new LanternBlock(
-		Settings.copy(Blocks.SOUL_LANTERN).registryKey(COPPER_LANTERN_KEY)
-	);
-	public static final CampfireBlock COPPER_CAMPFIRE = new CampfireBlock(
-		false,
-		1,
-		Settings.copy(Blocks.SOUL_CAMPFIRE).registryKey(COPPER_CAMPFIRE_KEY)
-	);
+	public static RegistrySupplier<CampfireBlock> COPPER_CAMPFIRE;
+	public static RegistrySupplier<CampfireBlock> IRON_CAMPFIRE;
+	public static RegistrySupplier<RedstoneCampfireBlock> REDSTONE_CAMPFIRE;
 
-	public static final IronFireBlock IRON_FIRE = new IronFireBlock(
-		Settings.copy(Blocks.FIRE)
-			.mapColor(MapColor.GOLD)
-			.luminance(state -> {
-				return 10;
-			})
-			.registryKey(IRON_FIRE_KEY)
-	);
-	public static final TorchBlock IRON_TORCH = new TorchBlock(
-		ParticleTypes.FLAME,
-		Settings.copy(Blocks.SOUL_TORCH).registryKey(IRON_TORCH_KEY)
-	);
-	 public static final TorchBlock IRON_WALL_TORCH = new WallTorchBlock(
-	 	ParticleTypes.FLAME,
-	 	Settings.copy(Blocks.SOUL_WALL_TORCH).registryKey(IRON_WALL_TORCH_KEY)
-	 );
-	public static final LanternBlock IRON_LANTERN = new LanternBlock(
-		Settings.copy(Blocks.SOUL_LANTERN).registryKey(IRON_LANTERN_KEY)
-	);
-	public static final CampfireBlock IRON_CAMPFIRE = new CampfireBlock(
-		false,
-		1,
-		Settings.copy(Blocks.SOUL_CAMPFIRE).registryKey(IRON_CAMPFIRE_KEY)
-	);
+	public static RegistrySupplier<LanternBlock> COPPER_LANTERN;
+	public static RegistrySupplier<LanternBlock> IRON_LANTERN;
+	public static RegistrySupplier<RedstoneLanternBlock> REDSTONE_LANTERN;
 
 	/*
 	 * Redstone TODOs:
@@ -146,125 +60,90 @@ public class SLSTOOFBlocks {
 	 * rule?
 	 */
 
-	// Only notable redstone fire difference is that just like torches, the light
-	// level is 7
-	public static final RedstoneFireBlock REDSTONE_FIRE = new RedstoneFireBlock(
-		Settings.copy(Blocks.FIRE)
-			.mapColor(MapColor.RED)
-			.luminance(state -> {
-				return 7;
-			})
-			.registryKey(REDSTONE_FIRE_KEY)
-	);
-	public static final LanternBlock REDSTONE_LANTERN =
-		new RedstoneLanternBlock(
-			Settings.copy(Blocks.SOUL_LANTERN)
-				.luminance(state -> {
-					return 7;
-				})
-				.registryKey(REDSTONE_LANTERN_KEY)
-		);
-	public static final CampfireBlock REDSTONE_CAMPFIRE =
-		new RedstoneCampfireBlock(
+	public static void registerBlocks() {
+		registerCampfireBlocks();
+		registerFireBlocks();
+		registerLanternBlocks();
+		registerTorchBlocks();
+	}
+
+	private static void registerCampfireBlocks() {
+		COPPER_CAMPFIRE = registerBlock("copper_campfire", () -> new CampfireBlock(
+			false,
+			1,
+			Settings.copy(Blocks.SOUL_CAMPFIRE).registryKey(COPPER_CAMPFIRE_KEY)));
+
+		IRON_CAMPFIRE = registerBlock("iron_campfire", () -> new CampfireBlock(
+			false,
+			1,
+			Settings.copy(Blocks.SOUL_CAMPFIRE).registryKey(IRON_CAMPFIRE_KEY)));
+
+		REDSTONE_CAMPFIRE = registerBlock("redstone_campfire", () -> new RedstoneCampfireBlock(
 			false,
 			1,
 			Settings.copy(Blocks.SOUL_CAMPFIRE)
 				.luminance(createLightLevelFromLitBlockState(7))
-				.registryKey(REDSTONE_CAMPFIRE_KEY)
-		);
-
-	/* Registration functions */
-	public static void registerCopperFireBlocks() {
-		Registry.register(
-			Registries.BLOCK,
-			Identifier.of(SLSTOOFMod.MOD_ID, "copper_fire"),
-			COPPER_FIRE
-		);
-		 Registry.register(
-		 	Registries.BLOCK,
-		 	Identifier.of(SLSTOOFMod.MOD_ID, "copper_torch"),
-		 	COPPER_TORCH
-		 );
-		 Registry.register(
-		 	Registries.BLOCK,
-		 	Identifier.of(SLSTOOFMod.MOD_ID, "copper_wall_torch"),
-		 	COPPER_WALL_TORCH
-		 );
-		Registry.register(
-			Registries.BLOCK,
-			Identifier.of(SLSTOOFMod.MOD_ID, "copper_lantern"),
-			COPPER_LANTERN
-		);
-		Registry.register(
-			Registries.BLOCK,
-			Identifier.of(SLSTOOFMod.MOD_ID, "copper_campfire"),
-			COPPER_CAMPFIRE
-		);
+				.registryKey(REDSTONE_CAMPFIRE_KEY)));
 	}
 
-	public static void registerIronFireBlocks() {
-		Registry.register(
-			Registries.BLOCK,
-			Identifier.of(SLSTOOFMod.MOD_ID, "iron_campfire"),
-			IRON_CAMPFIRE
-		);
-		Registry.register(
-			Registries.BLOCK,
-			Identifier.of(SLSTOOFMod.MOD_ID, "iron_fire"),
-			IRON_FIRE
-		);
-		 Registry.register(
-		 	Registries.BLOCK,
-		 	Identifier.of(SLSTOOFMod.MOD_ID, "iron_torch"),
-		 	IRON_TORCH
-		 );
-		 Registry.register(
-		 	Registries.BLOCK,
-		 	Identifier.of(SLSTOOFMod.MOD_ID, "iron_wall_torch"),
-		 	IRON_WALL_TORCH
-		 );
-		Registry.register(
-			Registries.BLOCK,
-			Identifier.of(SLSTOOFMod.MOD_ID, "iron_lantern"),
-			IRON_LANTERN
-		);
+	private static void registerFireBlocks() {
+		COPPER_FIRE = registerBlock("copper_fire", () ->
+			new CopperFireBlock(
+				Settings.copy(Blocks.FIRE)
+					.mapColor(MapColor.TEAL)
+					.luminance(state -> 10).registryKey(COPPER_FIRE_KEY)));
+
+		IRON_FIRE = registerBlock("iron_fire", () -> new IronFireBlock(
+			Settings.copy(Blocks.FIRE)
+				.mapColor(MapColor.GOLD)
+				.luminance(state -> 10)
+				.registryKey(IRON_FIRE_KEY)));
+
+		REDSTONE_FIRE = registerBlock("redstone_fire", () -> new RedstoneFireBlock(
+			Settings.copy(Blocks.FIRE)
+				.mapColor(MapColor.RED)
+				.luminance(state -> 7)
+				.registryKey(REDSTONE_FIRE_KEY)));
 	}
 
-	public static void registerRedstoneFireBlocks() {
-		Registry.register(
-			Registries.BLOCK,
-			Identifier.of(SLSTOOFMod.MOD_ID, "redstone_fire"),
-			REDSTONE_FIRE
-		);
-		Registry.register(
-			Registries.BLOCK,
-			Identifier.of(SLSTOOFMod.MOD_ID, "redstone_lantern"),
-			REDSTONE_LANTERN
-		);
-		Registry.register(
-			Registries.BLOCK,
-			Identifier.of(SLSTOOFMod.MOD_ID, "redstone_campfire"),
-			REDSTONE_CAMPFIRE
-		);
+	private static void registerLanternBlocks() {
+		COPPER_LANTERN = registerBlock("copper_lantern", () -> new LanternBlock(
+			Settings.copy(Blocks.SOUL_LANTERN).registryKey(COPPER_LANTERN_KEY)));
+
+		IRON_LANTERN = registerBlock("iron_lantern", () -> new LanternBlock(
+			Settings.copy(Blocks.SOUL_LANTERN).registryKey(IRON_LANTERN_KEY)));
+
+		REDSTONE_LANTERN = registerBlock("redstone_lantern", () -> new RedstoneLanternBlock(
+			Settings.copy(Blocks.SOUL_LANTERN).luminance(state ->
+				7
+			).registryKey(REDSTONE_LANTERN_KEY)));
 	}
 
-	// Without this, traits like the smoke particles and being able to cook won't
-	// work for our new campfires.
-	public static void updateCampfireBlockEntityType() {
-		Block[] blocks = new Block[] {
-			COPPER_CAMPFIRE,
-			IRON_CAMPFIRE,
-			REDSTONE_CAMPFIRE,
-		};
-		for (Block block : blocks) {
-			// BlockEntityType.CAMPFIRE.addSupportedBlock(block);
-			// FIXME
-		}
+	private static void registerTorchBlocks() {
+		// Particles are configured during client initialization
+		COPPER_TORCH = registerBlock("copper_torch", () -> new SLSTOOFTorchBlock(
+			Settings.copy(Blocks.SOUL_TORCH).registryKey(COPPER_TORCH_KEY)
+		));
+		COPPER_WALL_TORCH = registerBlock("copper_wall_torch", () ->
+			new SLSTOOFWallTorchBlock(
+				Settings.copy(Blocks.SOUL_WALL_TORCH).registryKey(COPPER_WALL_TORCH_KEY)));
+
+		IRON_TORCH = registerBlock("iron_torch", () -> new SLSTOOFTorchBlock(
+			Settings.copy(Blocks.SOUL_TORCH).registryKey(IRON_TORCH_KEY)));
+		IRON_WALL_TORCH = registerBlock("iron_wall_torch", () -> new SLSTOOFWallTorchBlock(
+			Settings.copy(Blocks.SOUL_WALL_TORCH).registryKey(IRON_WALL_TORCH_KEY)));
+	}
+
+	private static <B extends Block> RegistrySupplier<B> registerBlock(String id, Supplier<B> supplier) {
+		return SLSTOOFMod.BLOCKS.register(Identifier.of(SLSTOOFMod.MOD_ID, id), supplier);
+	}
+
+	private static RegistryKey<Block> registerKey(String id) {
+		return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SLSTOOFMod.MOD_ID, id));
 	}
 
 	private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {
-      return (state) -> {
-         return (Boolean)state.get(Properties.LIT) ? litLevel : 0;
-      };
-   }
+		return (state) ->
+			(Boolean) state.get(Properties.LIT) ? litLevel : 0;
+	}
 }

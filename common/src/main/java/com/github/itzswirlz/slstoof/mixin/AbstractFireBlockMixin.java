@@ -18,11 +18,11 @@ public class AbstractFireBlockMixin {
 	@Inject(method = "getState", at = @At("RETURN"), cancellable = true)
 	private static void injected(BlockView world, BlockPos pos, CallbackInfoReturnable<BlockState> cir) {
 		if (CopperFireBlock.isCopperBase(world.getBlockState(pos.down()))) {
-			cir.setReturnValue(SLSTOOFBlocks.COPPER_FIRE.getDefaultState());
+			cir.setReturnValue(SLSTOOFBlocks.COPPER_FIRE.get().getDefaultState());
 		} else if (IronFireBlock.isIronBase(world.getBlockState(pos.down()))) {
-			cir.setReturnValue(SLSTOOFBlocks.IRON_FIRE.getDefaultState());
+			cir.setReturnValue(SLSTOOFBlocks.IRON_FIRE.get().getDefaultState());
 		} else if (RedstoneFireBlock.isRedstoneBase(world.getBlockState(pos.down()))) {
-			cir.setReturnValue(SLSTOOFBlocks.REDSTONE_FIRE.getDefaultState());
+			cir.setReturnValue(SLSTOOFBlocks.REDSTONE_FIRE.get().getDefaultState());
 		}
 	}
 }

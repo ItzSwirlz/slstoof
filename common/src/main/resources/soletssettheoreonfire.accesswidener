@@ -1,3 +1,13 @@
 accessWidener   v2  named
+
+# TorchBlock and WallTorchBlock constructors
 accessible  method   net/minecraft/block/TorchBlock   <init>  (Lnet/minecraft/particle/SimpleParticleType;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible  method   net/minecraft/block/WallTorchBlock   <init>  (Lnet/minecraft/particle/SimpleParticleType;Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible     field   net/minecraft/block/TorchBlock  particle    Lnet/minecraft/particle/SimpleParticleType;
+mutable     field   net/minecraft/block/TorchBlock  particle    Lnet/minecraft/particle/SimpleParticleType;
+
+# SimpleParticleType constructor
+accessible  method  net/minecraft/particle/SimpleParticleType <init> (Z)V
+
+# Block entity registration
+accessible  method net/minecraft/block/entity/BlockEntityType <init> (Lnet/minecraft/block/entity/BlockEntityType$BlockEntityFactory;Ljava/util/Set;)V

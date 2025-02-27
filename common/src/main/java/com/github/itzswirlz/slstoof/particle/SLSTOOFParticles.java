@@ -1,20 +1,22 @@
 package com.github.itzswirlz.slstoof.particle;
 
 import com.github.itzswirlz.slstoof.SLSTOOFMod;
-// import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
+import com.google.common.base.Supplier;
+import dev.architectury.registry.registries.RegistrySupplier;
+import net.minecraft.particle.ParticleType;
 import net.minecraft.particle.SimpleParticleType;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class SLSTOOFParticles {
-	// public static final SimpleParticleType COPPER_FIRE_FLAME = FabricParticleTypes.simple();
-	// public static final SimpleParticleType IRON_FIRE_FLAME = FabricParticleTypes.simple();
+	public static RegistrySupplier<SimpleParticleType> COPPER_FIRE_FLAME;
+	public static RegistrySupplier<SimpleParticleType> IRON_FIRE_FLAME;
 
-	// public static void registerFireParticles() {
-	//     Registry.register(Registries.PARTICLE_TYPE, Identifier.of(SLSTOOFMod.MOD_ID, "copper_fire_flame"),
-	//             COPPER_FIRE_FLAME);
-	//     Registry.register(Registries.PARTICLE_TYPE, Identifier.of(SLSTOOFMod.MOD_ID, "iron_fire_flame"),
-	//             IRON_FIRE_FLAME);
-	// }
+	public static void registerFireParticles() {
+		COPPER_FIRE_FLAME = registerParticle("copper_fire_flame", () -> new SimpleParticleType(false));
+		IRON_FIRE_FLAME = registerParticle("iron_fire_flame", () -> new SimpleParticleType(false));
+	}
+
+	private static <P extends ParticleType<SimpleParticleType>> RegistrySupplier<P> registerParticle(String id, Supplier<P> supplier) {
+		return SLSTOOFMod.PARTICLES.register(Identifier.of(SLSTOOFMod.MOD_ID, id), supplier);
+	}
 }
