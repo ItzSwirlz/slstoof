@@ -13,4 +13,4 @@ Possibly in the future more materials can be added for other fire, in real life 
 Feel free to open a pull request!
 
 # License
-The template of this repository was made from the Quilt Mod Template, licensed under CC1.0 Universal. This mod is licensed under GNU GPL v3.0.
+The template of this repository was originally made from the Quilt Mod Template, licensed under CC 1.0 Universal. A lot of the other build files are from the Architectury template. This mod is licensed under GNU GPL v3.0.
