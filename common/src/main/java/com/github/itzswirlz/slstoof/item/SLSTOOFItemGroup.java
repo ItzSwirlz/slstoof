@@ -19,14 +19,14 @@ public class SLSTOOFItemGroup {
 				.icon(() -> new ItemStack(Items.FLINT_AND_STEEL))
 				.entries((context, entries) -> {
 					entries.add(SLSTOOFItems.COPPER_TORCH.get());
-					entries.add(SLSTOOFItems.COPPER_LANTERN.get());
-					entries.add(SLSTOOFItems.COPPER_CAMPFIRE.get());
-
 					entries.add(SLSTOOFItems.IRON_TORCH.get());
-					entries.add(SLSTOOFItems.IRON_LANTERN.get());
-					entries.add(SLSTOOFItems.IRON_CAMPFIRE.get());
 
+					entries.add(SLSTOOFItems.COPPER_LANTERN.get());
+					entries.add(SLSTOOFItems.IRON_LANTERN.get());
 					entries.add(SLSTOOFItems.REDSTONE_LANTERN.get());
+
+					entries.add(SLSTOOFItems.COPPER_CAMPFIRE.get());
+					entries.add(SLSTOOFItems.IRON_CAMPFIRE.get());
 					entries.add(SLSTOOFItems.REDSTONE_CAMPFIRE.get());
 				}).build());
 	}
