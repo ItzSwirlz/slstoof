@@ -6,5 +6,6 @@
     "item.soletssettheoreonfire.iron_lantern": "Iron Lantern",
     "item.soletssettheoreonfire.iron_torch": "Iron Torch",
     "item.soletssettheoreonfire.redstone_campfire": "Redstone Campfire",
-    "item.soletssettheoreonfire.redstone_lantern": "Redstone Lantern"
+    "item.soletssettheoreonfire.redstone_lantern": "Redstone Lantern",
+    "itemGroup.soletssettheoreonfire": "So Let's Set The Ore On Fire"
 }

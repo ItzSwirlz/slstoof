@@ -15,7 +15,7 @@ public class SLSTOOFItemGroup {
 	public static void registerItemGroup() {
 		SLSTOOF = SLSTOOFMod.ITEM_GROUPS.register(Identifier.of(SLSTOOFMod.MOD_ID, "slstoof"), () ->
 			// row "null" and column "-1" is what Fabric does with its builder
-			ItemGroup.create(null, -1).displayName(Text.literal("So Let's Set The Ore On Fire"))
+			ItemGroup.create(null, -1).displayName(Text.translatable("itemGroup.soletssettheoreonfire"))
 				.icon(() -> new ItemStack(Items.FLINT_AND_STEEL))
 				.entries((context, entries) -> {
 					entries.add(SLSTOOFItems.COPPER_TORCH.get());
