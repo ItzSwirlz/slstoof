@@ -11,7 +11,7 @@ authors = "ItzSwirlz"
 description = '''
 Adds correct ore-specific fire colors and respective blocks, so they can burn brighter than the sun.
 '''
-logoFile = "assets/soletssettheoreonfire/icon.png"
+logoFile = "icon.png"
 
 [[dependencies.soletssettheoreonfire]]
 modId = "neoforge"
