@@ -9,6 +9,14 @@ architectury {
 
 loom {
 	accessWidenerPath = gradle.rootProject.project(":common").loom.accessWidenerPath // Tells Loom where our Access Widener is
+
+	runs {
+		gameTestServer {
+			server()
+			vmArg "-Dfabric-api.gametest"
+			runDir "run/gametest"
+		}
+	}
 }
 
 configurations {

@@ -1,37 +1,40 @@
 {
-	"schemaVersion": 1,
-	"id": "soletssettheoreonfire",
-	"version": "${version}",
-	"name": "So Let's Set The Ore On Fire",
-	"description": "Adds correct ore-specific fire colors and respective blocks, so they can burn brighter than the sun.",
-	"authors": [
-	  "ItzSwirlz"
-	],
-	"license": "GNU General Public License v3.0",
-	"contact": {
-	  "homepage": "https://github.com/ItzSwirlz/slstoof",
-	  "issues": "https://github.com/ItzSwirlz/slstoof/issues",
-	  "sources": "https://github.com/ItzSwirlz/slstoof"
-	},
-	"icon": "icon.png",
-	"environment": "*",
-	"entrypoints": {
-	  "main": [
-		"com.github.itzswirlz.slstoof.SLSTOOFModFabric"
-	  ],
-	  "client": [
-		"com.github.itzswirlz.slstoof.client.SLSTOOFModFabricClient"
-	  ]
-	},
-	"mixins": [
-		"soletssettheoreonfire.mixins.json"
-	],
-  "accessWidener" : "soletssettheoreonfire.accesswidener",
+  "schemaVersion": 1,
+  "id": "soletssettheoreonfire",
+  "version": "${version}",
+  "name": "So Let's Set The Ore On Fire",
+  "description": "Adds correct ore-specific fire colors and respective blocks, so they can burn brighter than the sun.",
+  "authors": [
+    "ItzSwirlz"
+  ],
+  "license": "GNU General Public License v3.0",
+  "contact": {
+    "homepage": "https://github.com/ItzSwirlz/slstoof",
+    "issues": "https://github.com/ItzSwirlz/slstoof/issues",
+    "sources": "https://github.com/ItzSwirlz/slstoof"
+  },
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.itzswirlz.slstoof.SLSTOOFModFabric"
+    ],
+    "client": [
+      "com.github.itzswirlz.slstoof.client.SLSTOOFModFabricClient"
+    ],
+    "fabric-gametest": [
+      "com.github.itzswirlz.slstoof.test.SLSTOOFGameTests"
+    ]
+  },
+  "mixins": [
+    "soletssettheoreonfire.mixins.json"
+  ],
+  "accessWidener": "soletssettheoreonfire.accesswidener",
   "depends": {
-	  "fabricloader": ">=0.16.9",
-	  "minecraft": "~1.21.4",
-	  "java": ">=21",
-	  "fabric-api": "*",
-    "architectury":  ">=15.0.1"
-	}
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*",
+    "architectury": ">=15.0.1"
+  }
 }
