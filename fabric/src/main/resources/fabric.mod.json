@@ -23,7 +23,7 @@
       "com.github.itzswirlz.slstoof.client.SLSTOOFModFabricClient"
     ],
     "fabric-gametest": [
-      "com.github.itzswirlz.slstoof.test.SLSTOOFGameTests"
+      "com.github.itzswirlz.slstoof.test.FireIgnitionTests"
     ]
   },
   "mixins": [
