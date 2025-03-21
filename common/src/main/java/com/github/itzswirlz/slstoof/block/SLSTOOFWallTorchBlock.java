@@ -28,8 +28,8 @@ public class SLSTOOFWallTorchBlock extends WallTorchBlock {
 		double g = 0.22;
 		double h = 0.27;
 		Direction direction2 = direction.getOpposite();
-		world.addParticle(ParticleTypes.SMOKE, d + 0.27 * (double) direction2.getOffsetX(), e + 0.22, f + 0.27 * (double) direction2.getOffsetZ(), (double) 0.0F, (double) 0.0F, (double) 0.0F);
-		world.addParticle(this.replacementParticle, d + 0.27 * (double) direction2.getOffsetX(), e + 0.22, f + 0.27 * (double) direction2.getOffsetZ(), (double) 0.0F, (double) 0.0F, (double) 0.0F);
+		world.addParticleClient(ParticleTypes.SMOKE, d + 0.27 * (double) direction2.getOffsetX(), e + 0.22, f + 0.27 * (double) direction2.getOffsetZ(), (double) 0.0F, (double) 0.0F, (double) 0.0F);
+		world.addParticleClient(this.replacementParticle, d + 0.27 * (double) direction2.getOffsetX(), e + 0.22, f + 0.27 * (double) direction2.getOffsetZ(), (double) 0.0F, (double) 0.0F, (double) 0.0F);
 	}
 
 }

@@ -23,8 +23,8 @@ public class SLSTOOFTorchBlock extends TorchBlock {
 		double d = (double) pos.getX() + (double) 0.5F;
 		double e = (double) pos.getY() + 0.7;
 		double f = (double) pos.getZ() + (double) 0.5F;
-		world.addParticle(ParticleTypes.SMOKE, d, e, f, (double) 0.0F, (double) 0.0F, (double) 0.0F);
-		world.addParticle(this.replacementParticle, d, e, f, (double) 0.0F, (double) 0.0F, (double) 0.0F);
+		world.addParticleClient(ParticleTypes.SMOKE, d, e, f, (double) 0.0F, (double) 0.0F, (double) 0.0F);
+		world.addParticleClient(this.replacementParticle, d, e, f, (double) 0.0F, (double) 0.0F, (double) 0.0F);
 	}
 
 }
