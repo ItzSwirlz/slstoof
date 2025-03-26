@@ -16,21 +16,21 @@ logoFile = "icon.png"
 [[dependencies.soletssettheoreonfire]]
 modId = "neoforge"
 type = "required"
-versionRange = "[21.4,)"
+versionRange = "[21.5,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.soletssettheoreonfire]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.4,)"
+versionRange = "[1.21.5,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.soletssettheoreonfire]]
 modId = "architectury"
 type = "required"
-versionRange = "[15.0.1,)"
+versionRange = "[16.0.3,)"
 ordering = "AFTER"
 side = "BOTH"
 
