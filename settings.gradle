@@ -11,4 +11,5 @@ rootProject.name = 'slstoof'
 
 include 'common'
 include 'fabric'
-include 'neoforge'
+//include 'neoforge'
+
