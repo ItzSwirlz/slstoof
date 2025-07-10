@@ -11,6 +11,7 @@ import dev.architectury.registry.client.rendering.RenderTypeRegistry;
 import dev.architectury.registry.registries.Registrar;
 import dev.architectury.registry.registries.RegistrarManager;
 import net.minecraft.block.Block;
+import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -45,6 +46,6 @@ public final class SLSTOOFMod {
 		SLSTOOFBlocks.IRON_TORCH.get().replacementParticle = SLSTOOFParticles.IRON_FIRE_FLAME.get();
 		SLSTOOFBlocks.IRON_WALL_TORCH.get().replacementParticle = SLSTOOFParticles.IRON_FIRE_FLAME.get();
 
-		RenderTypeRegistry.register(RenderLayer.getCutout(), SLSTOOFBlocks.COPPER_FIRE.get(), SLSTOOFBlocks.IRON_FIRE.get(), SLSTOOFBlocks.REDSTONE_FIRE.get(), SLSTOOFBlocks.COPPER_CAMPFIRE.get(), SLSTOOFBlocks.IRON_CAMPFIRE.get(), SLSTOOFBlocks.REDSTONE_CAMPFIRE.get());
+		RenderTypeRegistry.register(BlockRenderLayer.CUTOUT, SLSTOOFBlocks.COPPER_FIRE.get(), SLSTOOFBlocks.IRON_FIRE.get(), SLSTOOFBlocks.REDSTONE_FIRE.get(), SLSTOOFBlocks.COPPER_CAMPFIRE.get(), SLSTOOFBlocks.IRON_CAMPFIRE.get(), SLSTOOFBlocks.REDSTONE_CAMPFIRE.get());
 	}
 }
