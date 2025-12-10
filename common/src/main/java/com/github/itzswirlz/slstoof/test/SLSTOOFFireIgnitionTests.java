@@ -1,28 +1,22 @@
 package com.github.itzswirlz.slstoof.test;
 
 import com.github.itzswirlz.slstoof.block.SLSTOOFBlocks;
-import net.minecraft.test.TestContext;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.core.BlockPos;
+import net.minecraft.gametest.framework.GameTestHelper;
 
 public class SLSTOOFFireIgnitionTests {
-	// Commented the .complete() as it may be unnecessary - in fact, it could be
-	// causing testcases that should fail to pass
-	// see https://report.bugs.mojang.com/servicedesk/customer/portal/2/MC-295787
-	public static void testCopperFireIgnition(TestContext context) {
-		context.pushButton(0, 1, 0);
-		context.expectBlockAtEnd(SLSTOOFBlocks.COPPER_FIRE.get(), new BlockPos(1, 2, 1));
-//		context.complete();
+	public static void testCopperFireIgnition(GameTestHelper helper) {
+		helper.pressButton(0, 1, 0);
+		helper.succeedWhenBlockPresent(SLSTOOFBlocks.COPPER_FIRE.get(), new BlockPos(1, 2, 1));
 	}
 
-	public static void testIronFireIgnition(TestContext context) {
-		context.pushButton(0, 1, 0);
-		context.expectBlockAtEnd(SLSTOOFBlocks.IRON_FIRE.get(), new BlockPos(1, 2, 1));
-//		context.complete();
+	public static void testIronFireIgnition(GameTestHelper helper) {
+		helper.pressButton(0, 1, 0);
+		helper.succeedWhenBlockPresent(SLSTOOFBlocks.IRON_FIRE.get(), new BlockPos(1, 2, 1));
 	}
 
-	public static void testRedstoneFireIgnition(TestContext context) {
-		context.pushButton(0, 1, 0);
-		context.expectBlockAtEnd(SLSTOOFBlocks.REDSTONE_FIRE.get(), new BlockPos(1, 2, 1));
-//		context.complete();
+	public static void testRedstoneFireIgnition(GameTestHelper helper) {
+		helper.pressButton(0, 1, 0);
+		helper.succeedWhenBlockPresent(SLSTOOFBlocks.REDSTONE_FIRE.get(), new BlockPos(1, 2, 1));
 	}
 }

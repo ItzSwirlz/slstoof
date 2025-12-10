@@ -7,7 +7,7 @@ accessible     field   net/minecraft/block/TorchBlock  particle    Lnet/minecraf
 mutable     field   net/minecraft/block/TorchBlock  particle    Lnet/minecraft/particle/SimpleParticleType;
 
 # SimpleParticleType constructor
-accessible  method  net/minecraft/particle/SimpleParticleType <init> (Z)V
+accessible  method  net/minecraft/core/particles/SimpleParticleType <init> (Z)V
 
 # Block entity registration
 accessible  method net/minecraft/block/entity/BlockEntityType <init> (Lnet/minecraft/block/entity/BlockEntityType$BlockEntityFactory;Ljava/util/Set;)V

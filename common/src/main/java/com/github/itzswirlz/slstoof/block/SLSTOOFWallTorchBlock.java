@@ -1,35 +1,36 @@
 package com.github.itzswirlz.slstoof.block;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.WallTorchBlock;
-import net.minecraft.particle.ParticleTypes;
-import net.minecraft.particle.SimpleParticleType;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.WallTorchBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class SLSTOOFWallTorchBlock extends WallTorchBlock {
 	// This is a hacky workaround needing to set the particle of the block
-	public SimpleParticleType replacementParticle;
+	public SimpleParticleType flameParticle;
 
-	public SLSTOOFWallTorchBlock(Settings settings) {
+	public SLSTOOFWallTorchBlock(BlockBehaviour.Properties properties) {
 		// Although we are calling super on the generic flame particle, we override in
 		// randomDisplayTick
-		super(ParticleTypes.FLAME, settings);
+		super(ParticleTypes.FLAME, properties);
 	}
 
 	@Override
-	public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-		Direction direction = (Direction) state.get(FACING);
-		double d = (double) pos.getX() + (double) 0.5F;
-		double e = (double) pos.getY() + 0.7;
-		double f = (double) pos.getZ() + (double) 0.5F;
+	public void animateTick(BlockState blockState, Level level, BlockPos blockPos, RandomSource randomSource) {
+		Direction direction = (Direction) blockState.getValue(FACING);
+		double d = (double) blockPos.getX() + (double) 0.5F;
+		double e = (double) blockPos.getY() + 0.7;
+		double f = (double) blockPos.getZ() + (double) 0.5F;
 		double g = 0.22;
 		double h = 0.27;
 		Direction direction2 = direction.getOpposite();
-		world.addParticleClient(ParticleTypes.SMOKE, d + 0.27 * (double) direction2.getOffsetX(), e + 0.22, f + 0.27 * (double) direction2.getOffsetZ(), (double) 0.0F, (double) 0.0F, (double) 0.0F);
-		world.addParticleClient(this.replacementParticle, d + 0.27 * (double) direction2.getOffsetX(), e + 0.22, f + 0.27 * (double) direction2.getOffsetZ(), (double) 0.0F, (double) 0.0F, (double) 0.0F);
+		level.addParticle(ParticleTypes.SMOKE, d + 0.27 * (double) direction2.getStepX(), e + 0.22, f + 0.27 * (double) direction2.getStepZ(), (double) 0.0F, (double) 0.0F, (double) 0.0F);
+		level.addParticle(this.flameParticle, d + 0.27 * (double) direction2.getStepX(), e + 0.22, f + 0.27 * (double) direction2.getStepZ(), (double) 0.0F, (double) 0.0F, (double) 0.0F);
 	}
 
 }

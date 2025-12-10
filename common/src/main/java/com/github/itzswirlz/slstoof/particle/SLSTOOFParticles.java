@@ -3,9 +3,9 @@ package com.github.itzswirlz.slstoof.particle;
 import com.github.itzswirlz.slstoof.SLSTOOFMod;
 import com.google.common.base.Supplier;
 import dev.architectury.registry.registries.RegistrySupplier;
-import net.minecraft.particle.ParticleType;
-import net.minecraft.particle.SimpleParticleType;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.particles.ParticleType;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.resources.ResourceLocation;
 
 public class SLSTOOFParticles {
 	public static RegistrySupplier<SimpleParticleType> COPPER_FIRE_FLAME;
@@ -17,6 +17,6 @@ public class SLSTOOFParticles {
 	}
 
 	private static <P extends ParticleType<SimpleParticleType>> RegistrySupplier<P> registerParticle(String id, Supplier<P> supplier) {
-		return SLSTOOFMod.PARTICLES.register(Identifier.of(SLSTOOFMod.MOD_ID, id), supplier);
+		return SLSTOOFMod.PARTICLES.register(ResourceLocation.fromNamespaceAndPath(SLSTOOFMod.MOD_ID, id), supplier);
 	}
 }

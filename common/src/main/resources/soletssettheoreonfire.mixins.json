@@ -3,10 +3,10 @@
   "package": "com.github.itzswirlz.slstoof.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "AbstractFireBlockMixin"
+    "BaseFireBlockMixin"
   ],
   "client": [
-    "AbstractFireBlockMixin"
+    "BaseFireBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1
