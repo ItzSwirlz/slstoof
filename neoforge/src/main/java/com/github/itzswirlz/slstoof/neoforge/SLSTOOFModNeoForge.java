@@ -4,8 +4,8 @@ import com.github.itzswirlz.slstoof.SLSTOOFMod;
 
 import com.github.itzswirlz.slstoof.block.SLSTOOFBlocks;
 import com.github.itzswirlz.slstoof.particle.SLSTOOFParticles;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.particle.FlameParticle;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -31,7 +31,7 @@ public final class SLSTOOFModNeoForge {
 	}
 
 	private void onRegisterParticleProvidersEvent(final RegisterParticleProvidersEvent event) {
-		event.registerSpriteSet(SLSTOOFParticles.COPPER_FIRE_FLAME.get(), FlameParticle.Factory::new);
-		event.registerSpriteSet(SLSTOOFParticles.IRON_FIRE_FLAME.get(), FlameParticle.Factory::new);
+		event.registerSpriteSet(SLSTOOFParticles.COPPER_FIRE_FLAME.get(), FlameParticle.Provider::new);
+		event.registerSpriteSet(SLSTOOFParticles.IRON_FIRE_FLAME.get(), FlameParticle.Provider::new);
 	}
 }
