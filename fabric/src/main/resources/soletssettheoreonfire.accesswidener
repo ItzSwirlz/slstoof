@@ -1,4 +1,5 @@
 accessWidener   v2  named
-accessible  method   net/minecraft/block/TorchBlock   <init>  (Lnet/minecraft/particle/SimpleParticleType;Lnet/minecraft/block/AbstractBlock$Settings;)V
-accessible  method   net/minecraft/block/WallTorchBlock   <init>  (Lnet/minecraft/particle/SimpleParticleType;Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible  method   net/minecraft/world/level/block/TorchBlock   <init>  (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+accessible  method   net/minecraft/world/level/block/WallTorchBlock   <init>  (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+
 # FIXME: duplicated file because for some reason it wouldnt bundle in common
