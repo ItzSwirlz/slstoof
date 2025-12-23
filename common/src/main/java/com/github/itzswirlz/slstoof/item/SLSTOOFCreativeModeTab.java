@@ -18,10 +18,8 @@ public class SLSTOOFCreativeModeTab {
 			CreativeModeTab.builder(null, -1).title(Component.translatable("itemGroup.soletssettheoreonfire"))
 				.icon(() -> new ItemStack(Items.FLINT_AND_STEEL))
 				.displayItems((displayParameters, output) -> {
-					output.accept(SLSTOOFItems.COPPER_TORCH.get());
 					output.accept(SLSTOOFItems.IRON_TORCH.get());
 
-					output.accept(SLSTOOFItems.COPPER_LANTERN.get());
 					output.accept(SLSTOOFItems.IRON_LANTERN.get());
 					output.accept(SLSTOOFItems.REDSTONE_LANTERN.get());
 

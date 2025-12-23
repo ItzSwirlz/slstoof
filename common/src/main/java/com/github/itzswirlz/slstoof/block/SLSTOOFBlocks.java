@@ -20,9 +20,6 @@ import net.minecraft.world.level.material.MapColor;
 
 public class SLSTOOFBlocks {
 	public static final ResourceKey<Block> COPPER_FIRE_KEY = registerKey("copper_fire");
-	public static final ResourceKey<Block> COPPER_TORCH_KEY = registerKey("copper_torch");
-	public static final ResourceKey<Block> COPPER_WALL_TORCH_KEY = registerKey("copper_wall_torch");
-	public static final ResourceKey<Block> COPPER_LANTERN_KEY = registerKey("copper_lantern");
 	public static final ResourceKey<Block> COPPER_CAMPFIRE_KEY = registerKey("copper_campfire");
 
 	public static final ResourceKey<Block> IRON_FIRE_KEY = registerKey("iron_fire");
@@ -40,8 +37,6 @@ public class SLSTOOFBlocks {
 	public static RegistrySupplier<IronFireBlock> IRON_FIRE;
 	public static RegistrySupplier<RedstoneFireBlock> REDSTONE_FIRE;
 
-	public static RegistrySupplier<SLSTOOFTorchBlock> COPPER_TORCH;
-	public static RegistrySupplier<SLSTOOFWallTorchBlock> COPPER_WALL_TORCH;
 	public static RegistrySupplier<SLSTOOFTorchBlock> IRON_TORCH;
 	public static RegistrySupplier<SLSTOOFWallTorchBlock> IRON_WALL_TORCH;
 
@@ -49,7 +44,6 @@ public class SLSTOOFBlocks {
 	public static RegistrySupplier<CampfireBlock> IRON_CAMPFIRE;
 	public static RegistrySupplier<RedstoneCampfireBlock> REDSTONE_CAMPFIRE;
 
-	public static RegistrySupplier<LanternBlock> COPPER_LANTERN;
 	public static RegistrySupplier<LanternBlock> IRON_LANTERN;
 	public static RegistrySupplier<RedstoneLanternBlock> REDSTONE_LANTERN;
 
@@ -107,9 +101,6 @@ public class SLSTOOFBlocks {
 	}
 
 	private static void registerLanternBlocks() {
-		COPPER_LANTERN = registerBlock("copper_lantern", () -> new LanternBlock(
-			BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_LANTERN).setId(COPPER_LANTERN_KEY)));
-
 		IRON_LANTERN = registerBlock("iron_lantern", () -> new LanternBlock(
 			BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_LANTERN).setId(IRON_LANTERN_KEY)));
 
@@ -121,13 +112,6 @@ public class SLSTOOFBlocks {
 
 	private static void registerTorchBlocks() {
 		// Particles are configured during client initialization
-		COPPER_TORCH = registerBlock("copper_torch", () -> new SLSTOOFTorchBlock(
-			BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH).setId(COPPER_TORCH_KEY)
-		));
-		COPPER_WALL_TORCH = registerBlock("copper_wall_torch", () ->
-			new SLSTOOFWallTorchBlock(
-				BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).setId(COPPER_WALL_TORCH_KEY)));
-
 		IRON_TORCH = registerBlock("iron_torch", () -> new SLSTOOFTorchBlock(
 			BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH).setId(IRON_TORCH_KEY)));
 		IRON_WALL_TORCH = registerBlock("iron_wall_torch", () -> new SLSTOOFWallTorchBlock(

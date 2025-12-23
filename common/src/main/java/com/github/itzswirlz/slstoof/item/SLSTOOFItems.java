@@ -14,8 +14,6 @@ import net.minecraft.world.item.StandingAndWallBlockItem;
 
 public class SLSTOOFItems {
 	public static final ResourceKey<Item> COPPER_CAMPFIRE_KEY = registerKey("copper_campfire");
-	public static final ResourceKey<Item> COPPER_LANTERN_KEY = registerKey("copper_lantern");
-	public static final ResourceKey<Item> COPPER_TORCH_KEY = registerKey("copper_torch");
 
 	public static final ResourceKey<Item> IRON_CAMPFIRE_KEY = registerKey("iron_campfire");
 	public static final ResourceKey<Item> IRON_LANTERN_KEY = registerKey("iron_lantern");
@@ -24,15 +22,12 @@ public class SLSTOOFItems {
 	public static final ResourceKey<Item> REDSTONE_CAMPFIRE_KEY = registerKey("redstone_campfire");
 	public static final ResourceKey<Item> REDSTONE_LANTERN_KEY = registerKey("redstone_lantern");
 
-
-	public static RegistrySupplier<StandingAndWallBlockItem> COPPER_TORCH;
 	public static RegistrySupplier<StandingAndWallBlockItem> IRON_TORCH;
 
 	public static RegistrySupplier<BlockItem> COPPER_CAMPFIRE;
 	public static RegistrySupplier<BlockItem> IRON_CAMPFIRE;
 	public static RegistrySupplier<BlockItem> REDSTONE_CAMPFIRE;
 
-	public static RegistrySupplier<BlockItem> COPPER_LANTERN;
 	public static RegistrySupplier<BlockItem> IRON_LANTERN;
 	public static RegistrySupplier<BlockItem> REDSTONE_LANTERN;
 
@@ -55,9 +50,6 @@ public class SLSTOOFItems {
 	}
 
 	private static void registerLanternItems() {
-		COPPER_LANTERN = registerItem("copper_lantern", () -> new BlockItem(SLSTOOFBlocks.COPPER_LANTERN.get(),
-			new Item.Properties().setId(COPPER_LANTERN_KEY)));
-
 		IRON_LANTERN = registerItem("iron_lantern", () -> new BlockItem(SLSTOOFBlocks.IRON_LANTERN.get(),
 			new Item.Properties().setId(IRON_LANTERN_KEY)));
 
@@ -66,12 +58,6 @@ public class SLSTOOFItems {
 	}
 
 	private static void registerTorchItems() {
-		COPPER_TORCH = registerItem("copper_torch", () -> new
-			StandingAndWallBlockItem(
-			SLSTOOFBlocks.COPPER_TORCH.get(), SLSTOOFBlocks.COPPER_WALL_TORCH.get(),
-			Direction.DOWN,
-			new Item.Properties().setId(COPPER_TORCH_KEY)));
-
 		IRON_TORCH = registerItem("iron_torch", () -> new StandingAndWallBlockItem(SLSTOOFBlocks.IRON_TORCH.get(), SLSTOOFBlocks.IRON_WALL_TORCH.get(), Direction.DOWN,
 			new Item.Properties().setId(IRON_TORCH_KEY)));
 	}

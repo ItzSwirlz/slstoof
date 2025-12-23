@@ -5,6 +5,8 @@ import com.github.itzswirlz.slstoof.SLSTOOFMod;
 import com.github.itzswirlz.slstoof.block.SLSTOOFBlocks;
 import com.github.itzswirlz.slstoof.particle.SLSTOOFParticles;
 import net.minecraft.client.particle.FlameParticle;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
@@ -28,6 +30,13 @@ public final class SLSTOOFModNeoForge {
 
 	private void onClientSetupEvent(final FMLClientSetupEvent event) {
 		SLSTOOFMod.initClient();
+
+		BuiltInRegistries.BLOCK.addAlias(Identifier.parse("soletssettheoreonfire:copper_lantern"), Identifier.parse("minecraft:copper_lantern"));
+		BuiltInRegistries.BLOCK.addAlias(Identifier.parse("soletssettheoreonfire:copper_torch"), Identifier.parse("minecraft:copper_torch"));
+		BuiltInRegistries.BLOCK.addAlias(Identifier.parse("soletssettheoreonfire:copper_wall_torch"), Identifier.parse("minecraft:copper_wall_torch"));
+
+		BuiltInRegistries.ITEM.addAlias(Identifier.parse("soletssettheoreonfire:copper_lantern"), Identifier.parse("minecraft:copper_lantern"));
+		BuiltInRegistries.ITEM.addAlias(Identifier.parse("soletssettheoreonfire:copper_torch"), Identifier.parse("minecraft:copper_torch"));
 	}
 
 	private void onRegisterParticleProvidersEvent(final RegisterParticleProvidersEvent event) {

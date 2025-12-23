@@ -39,9 +39,6 @@ public final class SLSTOOFMod {
 		// Also: Until Architectury's ParticleProviderRegistry is working, particle providers are provided per client
 
 		// Now that we are registered we can set our particles
-		SLSTOOFBlocks.COPPER_TORCH.get().flameParticle = SLSTOOFParticles.COPPER_FIRE_FLAME.get();
-		SLSTOOFBlocks.COPPER_WALL_TORCH.get().flameParticle = SLSTOOFParticles.COPPER_FIRE_FLAME.get();
-
 		SLSTOOFBlocks.IRON_TORCH.get().flameParticle = SLSTOOFParticles.IRON_FIRE_FLAME.get();
 		SLSTOOFBlocks.IRON_WALL_TORCH.get().flameParticle = SLSTOOFParticles.IRON_FIRE_FLAME.get();
 
