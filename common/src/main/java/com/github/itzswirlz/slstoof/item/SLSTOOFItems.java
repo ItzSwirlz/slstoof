@@ -6,8 +6,8 @@ import com.google.common.base.Supplier;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.StandingAndWallBlockItem;
@@ -77,10 +77,10 @@ public class SLSTOOFItems {
 	}
 
 	private static <I extends Item> RegistrySupplier<I> registerItem(String id, Supplier<I> supplier) {
-		return SLSTOOFMod.ITEMS.register(ResourceLocation.fromNamespaceAndPath(SLSTOOFMod.MOD_ID, id), supplier);
+		return SLSTOOFMod.ITEMS.register(Identifier.fromNamespaceAndPath(SLSTOOFMod.MOD_ID, id), supplier);
 	}
 
 	private static ResourceKey<Item> registerKey(String id) {
-		return ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(SLSTOOFMod.MOD_ID, id));
+		return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(SLSTOOFMod.MOD_ID, id));
 	}
 }

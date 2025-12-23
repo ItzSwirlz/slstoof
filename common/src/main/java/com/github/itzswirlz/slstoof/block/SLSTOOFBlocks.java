@@ -7,8 +7,8 @@ import com.google.common.base.Supplier;
 
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CampfireBlock;
@@ -135,11 +135,11 @@ public class SLSTOOFBlocks {
 	}
 
 	private static <B extends Block> RegistrySupplier<B> registerBlock(String id, Supplier<B> supplier) {
-		return SLSTOOFMod.BLOCKS.register(ResourceLocation.fromNamespaceAndPath(SLSTOOFMod.MOD_ID, id), supplier);
+		return SLSTOOFMod.BLOCKS.register(Identifier.fromNamespaceAndPath(SLSTOOFMod.MOD_ID, id), supplier);
 	}
 
 	private static ResourceKey<Block> registerKey(String id) {
-		return ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(SLSTOOFMod.MOD_ID, id));
+		return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(SLSTOOFMod.MOD_ID, id));
 	}
 
 	private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {
