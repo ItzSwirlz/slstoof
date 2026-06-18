@@ -37,7 +37,7 @@ public class RedstoneFireBlock extends BaseFireBlock {
 
 	// TODO: check we got every block
 	public static boolean canSurviveOnBlock(BlockState blockState) {
-		return blockState.is(BlockTags.REDSTONE_ORES) || blockState.is(Blocks.REDSTONE_BLOCK);
+		return blockState.is(Blocks.REDSTONE_ORE) || blockState.is(Blocks.DEEPSLATE_REDSTONE_ORE) || blockState.is(Blocks.REDSTONE_BLOCK);
 	}
 
 	protected boolean canBurn(BlockState blockState) {

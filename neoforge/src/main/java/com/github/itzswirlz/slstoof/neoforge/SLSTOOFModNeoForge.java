@@ -7,7 +7,7 @@ import com.github.itzswirlz.slstoof.particle.SLSTOOFParticles;
 import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
-import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.BlockEntityTypes;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -25,7 +25,7 @@ public final class SLSTOOFModNeoForge {
 	}
 
 	private void onBlockEntityTypeAddBlocksEvent(final BlockEntityTypeAddBlocksEvent event) {
-		event.modify(BlockEntityType.CAMPFIRE, SLSTOOFBlocks.COPPER_CAMPFIRE.get(), SLSTOOFBlocks.IRON_CAMPFIRE.get(), SLSTOOFBlocks.REDSTONE_CAMPFIRE.get());
+		event.modify(BlockEntityTypes.CAMPFIRE, SLSTOOFBlocks.COPPER_CAMPFIRE.get(), SLSTOOFBlocks.IRON_CAMPFIRE.get(), SLSTOOFBlocks.REDSTONE_CAMPFIRE.get());
 	}
 
 	private void onClientSetupEvent(final FMLClientSetupEvent event) {
