@@ -1,4 +1,4 @@
-accessWidener   v2  named
+accessWidener   v2  official
 accessible  method   net/minecraft/world/level/block/TorchBlock   <init>  (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 accessible  method   net/minecraft/world/level/block/WallTorchBlock   <init>  (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 
