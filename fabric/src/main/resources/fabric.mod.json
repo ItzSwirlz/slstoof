@@ -5,13 +5,13 @@
   "name": "So Let's Set The Ore On Fire",
   "description": "Adds correct ore-specific fire colors and respective blocks, so they can burn brighter than the sun.",
   "authors": [
-    "ItzSwirlz"
+    "ItzSwirlz/jpeisach"
   ],
   "license": "GNU General Public License v3.0",
   "contact": {
-    "homepage": "https://github.com/ItzSwirlz/slstoof",
-    "issues": "https://github.com/ItzSwirlz/slstoof/issues",
-    "sources": "https://github.com/ItzSwirlz/slstoof"
+    "homepage": "https://github.com/jpeisach/slstoof",
+    "issues": "https://github.com/jpeisach/slstoof/issues",
+    "sources": "https://github.com/jpeisach/slstoof"
   },
   "icon": "icon.png",
   "environment": "*",

@@ -1,13 +1,13 @@
 modLoader = "javafml"
 loaderVersion = "[4,)"
-issueTrackerURL = "https://github.com/ItzSwirlz/slstoof/issues"
+issueTrackerURL = "https://github.com/jpeisach/slstoof/issues"
 license = "GNU General Public License v3.0"
 
 [[mods]]
 modId = "soletssettheoreonfire"
 version = "${version}"
 displayName = "So Let's Set The Ore On Fire"
-authors = "ItzSwirlz"
+authors = "ItzSwirlz/jpeisach"
 description = '''
 Adds correct ore-specific fire colors and respective blocks, so they can burn brighter than the sun.
 '''
